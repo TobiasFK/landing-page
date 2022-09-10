@@ -27,6 +27,8 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .logo {
@@ -38,7 +40,7 @@ button {
 .header ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .header a {
@@ -65,36 +67,36 @@ button {
 }
 
 .content {
-    max-width: 1010px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+
 }
 
-/* main top section */
+/* top section */
 
-.main-top {
+.top-section {
     background-color: #1F2937;
     padding-bottom: 80px;
-
 }
 
-.main-content {
+.top-content {
     display: flex;
     justify-content: space-between;
     flex: 1;
     gap: 30px;
     align-items: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.main-copy {
+.top-copy {
     display: flex;
     flex-direction: column;
     max-width: 400px;
 }
 
-.main-copy h1 {
+.top-copy h1 {
     font-size: 48px;
     font-weight: bolder;
     color: #F9FAF8;
@@ -102,14 +104,12 @@ button {
 
 }
 
-.main-copy p {
+.top-copy p {
     font-size: 18px;
     color: #E5E7EB;
 }
 
-
-
-.main-copy button {
+.top-copy button {
     border: 1px solid #3882F6;
 }
 
@@ -123,34 +123,62 @@ button {
     max-height: 100%;
 }
 
+@media (max-width: 900px) { /* adjust CSS for top section when smaller screen size  */
+    .top-section {
+        padding-bottom: 0;
+    }
+    
+    .top-content {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .top-copy {
+        align-items: center;
+    }
+
+    .top-copy h1 {
+        font-size: 38px;
+        margin-bottom: 0;
+    }
+
+    .top-image {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: -10px;
+    }
+}
+
 /* information section */
 
-.information {
+.info-section {
     text-align: center;
     margin-bottom: 50px;
     margin-top: 20px;
 }
 
-.information h2 {
+.info-section h2 {
     font-size: 24px;
     font-weight: bolder;
     color: #1F2937;
 }
 
-
-.data-info {
+.info {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    flex-shrink: 1;
 }
 
-.data {
+.info-areas {
     width: 150px;
 }
 
-.data img {
+.info-areas img {
     max-width: 100%;
     border-radius: 20px;
     border: 2px solid #3882F6;
@@ -160,6 +188,16 @@ button {
     margin-top: 10px;
     font-size: 12px;
     color: grey;
+}
+
+@media (max-width: 700px) { /* adjust CSS for info section when smaller screen size  */
+    .info-areas {
+        width: 215px;
+    }
+    
+    .info {
+        flex-wrap: wrap;
+    }
 }
 
 /* inspirational quote section */
@@ -210,7 +248,7 @@ button {
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -231,37 +269,12 @@ button {
     font-size: 14px;
 }
 
-/* call to action
-
-.action {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+@media (max-width: 1000px) { /* adjust CSS for CTA section when smaller screen size  */
+    .box {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
-
-.box {
-    background-color: blue;
-    padding: 10px 50px;
-    width: 100%;
-    margin: auto;
-    flex: 0 1 1;
-}
-
-.box-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.box button {
-    padding: 5px 10px;
-}
-
- */
 
 /* footer */
 
@@ -269,7 +282,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(44, 44, 44);
+    background-color: #1F2937;
     color: #FFF;
     font-size: 12px;
     height: 50px;
